@@ -1,7 +1,5 @@
 # 3D Printing Vending Machine - Commercial Platform
 
-**Copyright © 2024 BeokCsin Kft. All Rights Reserved.**
-
 A proprietary cloud-based 3D printing vending machine system that enables automated 3D printing services for commercial deployment.
 
 This project implements a complete 3D printing vending machine system with the following components:
@@ -176,24 +174,5 @@ python printer_client.py
    - Backend: Build and push Docker image
    - Frontend: Deploy to Vercel/Netlify
 
-## 🔐 Proprietary Information
-
-This software contains proprietary algorithms, business logic, and trade secrets of [Your Company Name]. Unauthorized copying, distribution, or reverse engineering is strictly prohibited.
-
-## 📄 Legal
-
-- **Copyright**: © 2024 [Your Company Name]. All Rights Reserved.
-- **Trademarks**: All trademarks are property of their respective owners.
-- **Patents**: This technology may be covered by pending or issued patents.
-- **Confidentiality**: This software contains confidential business information.
-
-## 📞 Contact
-
-For business inquiries, licensing, or support:
-- **Email**: [your-email@company.com]
-- **Phone**: [your-phone-number]
-- **Website**: [your-website.com]
-
----
 
 **This is proprietary software. Unauthorized use, copying, or distribution is prohibited.**
