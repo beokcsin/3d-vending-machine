@@ -42,9 +42,9 @@ public class PrintJobsController : ControllerBase
             .Include(p => p.Logs.OrderByDescending(l => l.Timestamp).Take(5))
             .ToListAsync();
 
-        Response.Headers.Add("X-Total-Count", totalCount.ToString());
-        Response.Headers.Add("X-Page", page.ToString());
-        Response.Headers.Add("X-Page-Size", pageSize.ToString());
+        Response.Headers["X-Total-Count"] = totalCount.ToString();
+        Response.Headers["X-Page"] = page.ToString();
+        Response.Headers["X-Page-Size"] = pageSize.ToString();
 
         return Ok(printJobs);
     }
