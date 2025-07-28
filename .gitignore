@@ -1,0 +1,27 @@
+# Node
+node_modules/
+dist/
+.next/
+.env
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+env/
+
+# .NET
+bin/
+obj/
+
+# AWS CDK
+cdk.out/
+
+# Logs
+*.log
+
+# System
+.DS_Store
+*.swp
