@@ -25,3 +25,47 @@ cdk.out/
 # System
 .DS_Store
 *.swp
+
+# Business-specific files
+*.key
+*.pem
+*.crt
+certificates/
+secrets/
+business-config/
+financial-data/
+customer-data/
+proprietary/
+trade-secrets/
+
+# AWS credentials and configuration
+.aws/
+aws-credentials.json
+aws-config.json
+
+# Database dumps and backups
+*.sql
+*.dump
+backups/
+
+# Payment processing files
+stripe-keys.txt
+paypal-config.json
+payment-keys/
+
+# Legal and compliance documents
+legal/
+compliance/
+patents/
+trademarks/
+
+# Marketing and sales data
+marketing-data/
+sales-data/
+customer-analytics/
+revenue-reports/
+
+# Internal documentation
+internal-docs/
+company-policies/
+employee-data/

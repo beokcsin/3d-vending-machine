@@ -1,15 +1,15 @@
-# 3D Printing Vending Machine
+# 3D Printing Vending Machine - Commercial Platform
 
-A cloud-based 3D printing vending machine system that allows users to upload 3D models and have them printed automatically.
+**Copyright © 2024 BeokCsin Kft. All Rights Reserved.**
 
-## Architecture Overview
+A proprietary cloud-based 3D printing vending machine system that enables automated 3D printing services for commercial deployment.
 
 This project implements a complete 3D printing vending machine system with the following components:
 
 ### Cloud Infrastructure (AWS)
 - **Frontend**: React/Next.js web application with Material-UI
 - **Backend**: ASP.NET Core API running on ECS Fargate
-- **Database**: PostgreSQL on RDS
+- **Database**: PostgreSQL on RDS for data persistence
 - **File Storage**: S3 for 3D model files
 - **Real-time Communication**: AWS IoT Core (MQTT) for printer communication
 - **Notifications**: SNS/SES for email/SMS + WebSocket push notifications
@@ -20,7 +20,7 @@ This project implements a complete 3D printing vending machine system with the f
 - **Software**: Python client for AWS IoT Core communication
 - **Functionality**: Downloads files from S3, manages printer operations, reports status
 
-## Quick Start
+## 🚀 Quick Start
 
 ### Prerequisites
 - AWS CLI configured with appropriate permissions
@@ -102,7 +102,7 @@ export AWS_IOT_CA_PATH=/path/to/AmazonRootCA1.pem
 python printer_client.py
 ```
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 3d-vending-machine/
@@ -125,7 +125,7 @@ python printer_client.py
     └── cdk.json
 ```
 
-## Key Features
+## 💼 Business Features
 
 ### Frontend
 - Modern React/Next.js UI with Material-UI
@@ -133,6 +133,7 @@ python printer_client.py
 - Real-time status updates via WebSocket
 - Price and time estimation
 - Email notifications
+- Payment integration ready
 
 ### Backend API
 - RESTful API for print job management
@@ -140,6 +141,7 @@ python printer_client.py
 - PostgreSQL database with Entity Framework
 - AWS S3 integration for file storage
 - SNS integration for notifications
+- Business logic for pricing and operations
 
 ### Edge Device
 - Python client for AWS IoT Core
@@ -147,6 +149,7 @@ python printer_client.py
 - Printer status monitoring
 - MQTT communication with cloud
 - Support for multiple printer types
+- Remote management capabilities
 
 ### Infrastructure
 - Infrastructure as Code with AWS CDK
@@ -156,7 +159,7 @@ python printer_client.py
 - S3 for file storage
 - IoT Core for device communication
 
-## Development Workflow
+## 🔒 Security & Compliance
 
 1. **Local Development**:
    - Backend: `dotnet run` in `backend/VendingMachine.Api`
@@ -173,71 +176,24 @@ python printer_client.py
    - Backend: Build and push Docker image
    - Frontend: Deploy to Vercel/Netlify
 
-## Security Considerations
+## 🔐 Proprietary Information
 
-- All communication uses HTTPS/TLS
-- AWS IAM roles for service permissions
-- VPC with private subnets for database
-- IoT Core certificates for device authentication
-- CORS properly configured
-- Input validation and sanitization
+This software contains proprietary algorithms, business logic, and trade secrets of [Your Company Name]. Unauthorized copying, distribution, or reverse engineering is strictly prohibited.
 
-## Monitoring and Logging
+## 📄 Legal
 
-- CloudWatch logs for all services
-- X-Ray for distributed tracing
-- CloudWatch metrics for performance
-- SNS notifications for alerts
+- **Copyright**: © 2024 [Your Company Name]. All Rights Reserved.
+- **Trademarks**: All trademarks are property of their respective owners.
+- **Patents**: This technology may be covered by pending or issued patents.
+- **Confidentiality**: This software contains confidential business information.
 
-## Cost Optimization
+## 📞 Contact
 
-- RDS instance sizing based on usage
-- S3 lifecycle policies for file management
-- ECS Fargate for serverless containers
-- CloudWatch alarms for cost monitoring
+For business inquiries, licensing, or support:
+- **Email**: [your-email@company.com]
+- **Phone**: [your-phone-number]
+- **Website**: [your-website.com]
 
-## Next Steps
+---
 
-1. **Authentication**: Add AWS Cognito for user management
-2. **Payment**: Integrate Stripe/PayPal for payments
-3. **Printer Integration**: Add support for specific printer APIs (OctoPrint, etc.)
-4. **Mobile App**: Create React Native mobile app
-5. **Analytics**: Add usage analytics and reporting
-6. **Multi-region**: Deploy to multiple AWS regions
-7. **Auto-scaling**: Implement auto-scaling based on demand
-
-## Troubleshooting
-
-### Common Issues
-
-1. **CDK Deployment Fails**:
-   - Ensure AWS CLI is configured
-   - Check IAM permissions
-   - Verify region settings
-
-2. **Database Connection Issues**:
-   - Check security group rules
-   - Verify connection string
-   - Ensure database is running
-
-3. **IoT Core Connection Issues**:
-   - Verify certificates are valid
-   - Check IoT policy permissions
-   - Ensure correct endpoint
-
-4. **Frontend API Calls Fail**:
-   - Check CORS configuration
-   - Verify API Gateway URL
-   - Check network connectivity
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
+**This is proprietary software. Unauthorized use, copying, or distribution is prohibited.**
