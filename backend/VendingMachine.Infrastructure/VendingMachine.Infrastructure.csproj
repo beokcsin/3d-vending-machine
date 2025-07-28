@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.0" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.305.12" />
+    <PackageReference Include="AWSSDK.SimpleNotificationService" Version="3.7.300.45" />
+    <PackageReference Include="AWSSDK.IoT" Version="3.7.300.45" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VendingMachine.Core\VendingMachine.Core.csproj" />
+  </ItemGroup>
+
+</Project> 
