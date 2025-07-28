@@ -1,0 +1,41 @@
+flowchart LR;
+  %% Browser Layer
+  subgraph Browser["Browser"];
+    A[Web Browser<br/>React/Next.js + Cognito];
+  end;
+
+  %% AWS Cloud Layer
+  subgraph AWS_Cloud["AWS Cloud"];
+    direction TB;
+    B[API Gateway<br/>REST API + WebSocket];
+    C[ASP.NET Core API<br/>ECS/Fargate];
+    D[S3 Bucket];
+    E[RDS PostgreSQL];
+    F[AWS IoT Core<br/>MQTT Broker];
+
+    subgraph Notifications["Notifications"];
+      G[SNS Topic];
+      H[SES / SMS];
+      I[Lambda Fan‑Out<br/>WebSocket Push];
+    end;
+  end;
+
+  %% Edge Layer
+  subgraph Edge["Printer Edge"];
+    J[Raspberry Pi / mini PC<br/>• MQTT Client<br/>• S3 Downloader];
+  end;
+
+  %% Flows
+  A -->|HTTPS REST/GraphQL| B;
+  B --> C;
+  C -->|Pre‑signed URL| D;
+  C -->|Metadata CRUD| E;
+  C -- MQTT Publish --> F;
+  F --> J;
+  J -- MQTT Status --> F;
+  F --> C;
+  C -->|Job Complete| G;
+  G --> H;
+  G --> I;
+  I -->|WebSocket Push| B;
+  B -->|WebSocket Message| A;
